@@ -1,0 +1,229 @@
+@import "base.scss"; //  _____                 _                                 _             _
+// / ____|               | |                               | |           | |
+// | |       _   _   ___  | |_    ___    _ __ ___      ___  | |_   _   _  | |   ___   ___
+// | |      | | | | / __| | __|  / _ \  | '_ ` _ \    / __| | __| | | | | | |  / _ \ / __|
+// | |____  | |_| | \__ \ | |_  | (_) | | | | | | |   \__ \ | |_  | |_| | | | |  __/ \__ \
+// \_____|  \__,_| |___/  \__|  \___/  |_| |_| |_|   |___/  \__|  \__, | |_|  \___| |___/
+//                                                                 __/ |
+//                                                                |___/
+$clt: #206fa8;
+$dark: #ccc;
+$light: lighten(#ccc, 20%);
+
+#hc-nav-wrapper {
+    position: fixed;
+    z-index: 2147483647; // thank you, Jake Lear!
+    bottom: -3px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    a {
+        color: $dark;
+        &:hover {
+            color: $light;
+        }
+    }
+}
+
+#hc-nav-head {
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.75);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $sans;
+    bottom: 57px;
+    height: 30px;
+    background: white;
+    padding: 0.8rem 2rem 0;
+    color: $light;
+    background: $clt;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#hc-nav {
+    height: 300px;
+    transition: all 0.5s ease;
+}
+
+.hc-nav-short {
+    height: 60px !important;
+    transition: all 0.5s ease;
+}
+
+.infiniteCarousel {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+}
+
+.infiniteCarousel .wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-height: 100%;
+    position: absolute;
+    bottom: -40px;
+    top: 0;
+}
+
+.infiniteCarousel .wrapper ul {
+    width: 3600px;
+    height: 100%;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    @media(max-width: 1500px) {
+        width: 3000px;
+    }
+    @media(max-width: 768px) {
+        width: 1500px;
+    }
+
+    li {
+        width: 600px;
+        height: 100%;
+        float: left;
+        border: 3px solid darken(#ccc, 60%);
+        border-top: none;
+        border-bottom: none;
+        // text styling
+        text-align: center;
+        font-family: $sans !important;
+        font-weight: bold !important;
+        font-size: 2rem !important;
+        color: $dark;
+        cursor: pointer;
+        position: relative;
+        // background image styling
+        background-position: center;
+        background-size: cover;
+
+        &:hover {
+            color: $light;
+        }
+        @media(max-width: 1500px) {
+            width: 500px;
+            // font-size: 1.5rem !important;
+            // padding-top: 2rem;
+        }
+        @media(max-width: 768px) {
+            width: 250px;
+            font-size: 1.3rem !important;
+        }
+    }
+
+    li:first-child {
+        margin-left: 0;
+    }
+}
+
+.item-head {
+    @media(max-width: 768px) {
+        padding-top: 0.4rem;
+    }
+}
+
+.item-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.no-bg-img {
+    background-image: none !important;
+    background: #333;
+    cursor: pointer;
+
+    &:hover {
+        background: #444;
+    }
+}
+
+$items: a b c d e f;
+
+@each $item in $items {
+    .item-#{$item} {
+        background-image: url("http://media.mcclatchydc.com/static/graphics/20170515-CharlottePrisons/images/item-#{$item}.jpg");
+    }
+}
+
+.vertical-align {
+    position: relative;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.align-btn {
+    top: 50%;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.hc-nav-btn {
+    cursor: pointer;
+    height: 100%;
+    width: 5%;
+    display: inline-block;
+    float: left;
+    background: #222;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    text-align: center;
+    color: white;
+    font-size: 2rem !important;
+    color: $dark;
+    width: 100%;
+
+    &:hover {
+        color: $light;
+    }
+}
+
+.item-deck {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 0 1rem;
+
+    @media(max-width: 768px) {
+        font-size: 1.3rem;
+    }
+}

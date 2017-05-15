@@ -1,0 +1,192 @@
+#hc-nav-wrapper {
+  position: fixed;
+  z-index: 2147483647;
+  bottom: -3px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+  #hc-nav-wrapper a {
+    color: #ccc; }
+    #hc-nav-wrapper a:hover {
+      color: white; }
+
+#hc-nav-head {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 7px -1px rgba(0, 0, 0, 0.75);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "McClatchy Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  bottom: 57px;
+  height: 30px;
+  background: white;
+  padding: 0.8rem 2rem 0;
+  color: white;
+  background: #206fa8;
+  text-align: center;
+  font-size: 1.5rem; }
+
+#hc-nav {
+  height: 300px;
+  transition: all 0.5s ease; }
+
+.hc-nav-short {
+  height: 60px !important;
+  transition: all 0.5s ease; }
+
+.infiniteCarousel {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  float: left; }
+
+.infiniteCarousel .wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 100%;
+  position: absolute;
+  bottom: -40px;
+  top: 0; }
+
+.infiniteCarousel .wrapper ul {
+  width: 3600px;
+  height: 100%;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0; }
+  @media (max-width: 1500px) {
+    .infiniteCarousel .wrapper ul {
+      width: 3000px; } }
+  @media (max-width: 768px) {
+    .infiniteCarousel .wrapper ul {
+      width: 1500px; } }
+  .infiniteCarousel .wrapper ul li {
+    width: 600px;
+    height: 100%;
+    float: left;
+    border: 3px solid #333333;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    font-family: "McClatchy Sans", Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 2rem !important;
+    color: #ccc;
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-size: cover; }
+    .infiniteCarousel .wrapper ul li:hover {
+      color: white; }
+    @media (max-width: 1500px) {
+      .infiniteCarousel .wrapper ul li {
+        width: 500px; } }
+    @media (max-width: 768px) {
+      .infiniteCarousel .wrapper ul li {
+        width: 250px;
+        font-size: 1.3rem !important; } }
+  .infiniteCarousel .wrapper ul li:first-child {
+    margin-left: 0; }
+
+@media (max-width: 768px) {
+  .item-head {
+    padding-top: 0.4rem; } }
+
+.item-background {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  height: 100%;
+  width: 100%; }
+  .item-background:hover {
+    background-color: rgba(0, 0, 0, 0.6); }
+
+.no-bg-img {
+  background-image: none !important;
+  background: #333;
+  cursor: pointer; }
+  .no-bg-img:hover {
+    background: #444; }
+
+.item-a {
+  background-image: url("http://media.mcclatchydc.com/static/graphics/20170515-CharlottePrisons/images/item-a.jpg"); }
+
+.item-b {
+  background-image: url("http://media.mcclatchydc.com/static/graphics/20170515-CharlottePrisons/images/item-b.jpg"); }
+
+.item-c {
+  background-image: url("http://media.mcclatchydc.com/static/graphics/20170515-CharlottePrisons/images/item-c.jpg"); }
+
+.item-d {
+  background-image: url("http://media.mcclatchydc.com/static/graphics/20170515-CharlottePrisons/images/item-d.jpg"); }
+
+.item-e {
+  background-image: url("http://media.mcclatchydc.com/static/graphics/20170515-CharlottePrisons/images/item-e.jpg"); }
+
+.item-f {
+  background-image: url("http://media.mcclatchydc.com/static/graphics/20170515-CharlottePrisons/images/item-f.jpg"); }
+
+.vertical-align {
+  position: relative;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.align-btn {
+  top: 50%; }
+
+.clearfix {
+  display: block;
+  zoom: 1; }
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.hc-nav-btn {
+  cursor: pointer;
+  height: 100%;
+  width: 5%;
+  display: inline-block;
+  float: left;
+  background: #222;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  position: relative; }
+
+.fa-chevron-left,
+.fa-chevron-right {
+  text-align: center;
+  color: white;
+  font-size: 2rem !important;
+  color: #ccc;
+  width: 100%; }
+  .fa-chevron-left:hover,
+  .fa-chevron-right:hover {
+    color: white; }
+
+.item-deck {
+  display: none;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 0 1rem; }
+  @media (max-width: 768px) {
+    .item-deck {
+      font-size: 1.3rem; } }
+
+/*# sourceMappingURL=custom.css.map */
